@@ -1,4 +1,4 @@
-Recommender Systems
+Recommender Systems using Collaborative Filtering
 ======================
 
 ### Enviroment versions required:
