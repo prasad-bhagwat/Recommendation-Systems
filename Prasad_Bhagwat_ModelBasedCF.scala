@@ -64,32 +64,32 @@ object ModelBasedCF{
     //println(training_data)
     // Configuration parameters for training model
     val user_rating     = training_data.map(x => Rating(x._1._1, x._1._2, x._2))
-    val rank            = 12
-    val number_iter     = 12
-    val lambda_val      = 0.1
-    val blocks          = 1
-    val seed            = 4
+    val rank            = 12	// Can be changed for better performance
+    val num_iterations  = 12	// Can be changed for better performance
+    val lambda_value    = 0.1	// Can be changed for better performance
+    val num_blocks      = 1	// Can be changed for better performance
+    val seed            = 4	// Can be changed for better performance
 
     // ALS Model training
     val ALS_model       = ALS.train(ratings = user_rating,
                           rank= rank,
-                          iterations= number_iter,
-                          lambda= lambda_val,
-                          blocks= blocks,
+                          iterations= num_iterations,
+                          lambda= lambda_value,
+                          num_blocks= num_blocks,
                           seed= seed)
 
     // Generating testing data
-    val user_movies     = testing_data.map(x=> (x._1._1, x._1._2))
+    val user_movies     	= testing_data.map(x=> (x._1._1, x._1._2))
 
     // Predicted values for testing data
-    val predicted_vals  = ALS_model.predict(user_movies).map{case Rating(user, product, rating) => ((user, product), rating)}
+    val predicted_vals  	= ALS_model.predict(user_movies).map{case Rating(user, product, rating) => ((user, product), rating)}
 
     // Generating output string as per expected format and writing in Output file
-    val output_list     = predicted_vals.sortByKey().map(x=> (x._1._1, x._1._2, x._2)).collect()
+    val output_list     	= predicted_vals.sortByKey().map(x=> (x._1._1, x._1._2, x._2)).collect()
 
     // Generating expected output of the form "User, Movie, Predicted Rating"
-    val temp_result     = output_list.mkString("\n")
-    val final_result    = temp_result.replace("(", "").replace(")", "").replace(",", ", ")
+    val intermediate_result     = output_list.mkString("\n")
+    val final_result    	= intermediate_result.replace("(", "").replace(")", "").replace(",", ", ")
 
     // Writing results into output file
     output_file.write(final_result)
