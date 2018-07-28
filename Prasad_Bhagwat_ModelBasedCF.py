@@ -51,18 +51,18 @@ def main():
 
     # Configuration parameters for training model
     user_rating     = training_data.map(lambda x: Rating(int(x[0][0]), int(x[0][1]), float(x[1])))
-    rank            = 12    # Temporary
-    number_iter     = 12    # Temporary
-    lambda_val      = 0.1
-    blocks          = 1
-    seed            = 4
+    rank            = 12    # Can be changed for better performance
+    num_iterations  = 12    # Can be changed for better performance
+    lambda_value    = 0.1   # Can be changed for better performance
+    num_blocks      = 1     # Can be changed for better performance
+    seed            = 4     # Can be changed for better performance
 
     # ALS Model training
     ALS_model       = ALS.train(ratings= user_rating, \
                                 rank= rank, \
-                                iterations= number_iter, \
-                                lambda_= lambda_val, \
-                                blocks= blocks, \
+                                iterations= num_iterations, \
+                                lambda_= lambda_value, \
+                                blocks= num_blocks, \
                                 seed= seed)
 
     # Generating testing data
