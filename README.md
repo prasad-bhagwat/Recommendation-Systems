@@ -11,7 +11,7 @@ Scala: 2.11
 [MovieLens](https://grouplens.org/datasets/movielens/) 
 
   
-### 1\. Model-based Collaborative Filtering using Spark's [MLlib Collaborative Filtering - RDD-based API](http://spark.apache.org/docs/latest/mllib-collaborative-filtering.html) 
+### 1\. Model-based Collaborative Filtering using Spark's [MLlib's Collaborative Filtering using alternating least squares (ALS) algorithm](http://spark.apache.org/docs/latest/mllib-collaborative-filtering.html) 
 ---------------------------------------
 
 _Parameters used for ALS training:_  
