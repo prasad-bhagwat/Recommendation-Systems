@@ -1,4 +1,4 @@
-Collaborative Filtering(CF) based Recommendation Systems
+Recommender Systems
 ======================
 
 ### Enviroment versions required:
