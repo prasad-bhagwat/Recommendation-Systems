@@ -14,12 +14,12 @@ Scala: 2.11
 ### 1\. Model-based Collaborative Filtering using Spark's [MLlib Collaborative Filtering - RDD-based API](http://spark.apache.org/docs/latest/mllib-collaborative-filtering.html) 
 ---------------------------------------
 
-_Parameters used for ALS training:_
-_I used grid search to find the optimal parameters for training ALS Model for both Python and Scala. For doing this I used spark’s in-built ParamGridBuilder and RegressionValueEvaluator and received the following parameters to meet required RMSE value:_
-_1. rank – Number of features to use for training, I used 12 as rank._
-_2. iterations – Number of iterations of ALS, I used 12 iterations for training ALS._
-_3. lambda – Regularization parameter, I used 0.1 as lambda value.4. blocks – Number of blocks used to parallelize the computation, I used 1 block._
-_5. seed – Random seed for initial matrix factorization model, I used 4 as random seed._
+_Parameters used for ALS training:_  
+_I used grid search to find the optimal parameters for training ALS Model for both Python and Scala. For doing this I used spark’s in-built ParamGridBuilder and RegressionValueEvaluator and received the following parameters to meet required RMSE value:_  
+_1. rank – Number of features to use for training, I used 12 as rank._  
+_2. iterations – Number of iterations of ALS, I used 12 iterations for training ALS._  
+_3. lambda – Regularization parameter, I used 0.1 as lambda value.4. blocks – Number of blocks used to parallelize the computation, I used 1 block._  
+_5. seed – Random seed for initial matrix factorization model, I used 4 as random seed._  
 
 ### Python command for executing Model-based Collaborative Filtering
 
@@ -78,10 +78,10 @@ RMSE for Small Movie Dataset: 0.9517086967596017
 ### 2\. User-based Collaborative Filtering
 -----------------
 
-_Improvements done both in Python and Scala code to meet better RMSE:_
-_1. I have used Pearson Correlation as user-user similarity metric_
-_2. I have normalized the final user’s rating predictions which were going below 0 and above 5. Negative rating predictions were restricted to 0 and prediction value greater than 5 were restricted to 5 as the rating range was 0-5._
-_3. I have used average of user’s rating for missing data points_
+_Improvements done both in Python and Scala code to meet better RMSE:_  
+_1. I have used Pearson Correlation as user-user similarity metric_  
+_2. I have normalized the final user’s rating predictions which were going below 0 and above 5. Negative rating predictions were restricted to 0 and prediction value greater than 5 were restricted to 5 as the rating range was 0-5._  
+_3. I have used average of user’s rating for missing data points_  
 
 ### Python command for executing User-based Collaborative Filtering
 
@@ -138,8 +138,8 @@ RMSE for Small Movie Dataset: 0.9439942551274575
 ### 3\. Item-based Collaborative Filtering using results obtained from results of [Jaccard Similarity](https://github.com/prasad-bhagwat/Locality-Sensitive-Hashing-using-Jaccard-Similarty)
 -----------------
 
-_Improvements done both in Python and Scala code to meet the required RMSE:_
-_1. To predict rating of movie for which Jaccard similarity is not present I have used average rating of the user for all other movies which are rated by that user in the training set which in turn increased the prediction accuracy._
+_Improvements done both in Python and Scala code to meet the required RMSE:_  
+_1. To predict rating of movie for which Jaccard similarity is not present I have used average rating of the user for all other movies which are rated by that user in the training set which in turn increased the prediction accuracy._  
 
 ### Python command for executing Item-based Collaborative Filtering
 
