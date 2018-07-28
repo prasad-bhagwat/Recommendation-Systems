@@ -45,7 +45,7 @@ Note : If you get ’_Spark java.lang.OutOfMemoryError: Java heap space_ ’ thi
 
 **ModelBasedCF Results using Python :**
 
-RMSE for Small Movie Dataset: 0.95170869627
+RMSE for Small Movie Dataset: 0.95170869627   
 
 
 ### Scala command for executing Model-based Collaborative Filtering
@@ -72,7 +72,7 @@ Note : If you get ’_Spark java.lang.OutOfMemoryError: Java heap space_ ’ thi
 
 **ModelBasedCF Results using Scala :**
 
-RMSE for Small Movie Dataset: 0.9517086967596017
+RMSE for Small Movie Dataset: 0.9517086967596017   
 
 
 ### 2\. User-based Collaborative Filtering
@@ -106,7 +106,7 @@ Note : Entries present in _‘testing.csv’_ file are not used to the your reco
 
 **UserBasedCF Results using Python :**
 
-RMSE for Small Movie Dataset: 0.943994254061
+RMSE for Small Movie Dataset: 0.943994254061   
 
 
 ### Scala command for executing User-based Collaborative Filtering
@@ -132,8 +132,8 @@ Note : Entries present in _‘testing.csv’_ file are not used to the your reco
 
 **UserBasedCF Results using Scala :**
 
-RMSE for Small Movie Dataset: 0.9439942551274575
-
+RMSE for Small Movie Dataset: 0.9439942551274575   
+   
 
 ### 3\. Item-based Collaborative Filtering using results obtained from results of [Jaccard Similarity](https://github.com/prasad-bhagwat/Locality-Sensitive-Hashing-using-Jaccard-Similarty)
 -----------------
