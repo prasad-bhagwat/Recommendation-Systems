@@ -7,6 +7,13 @@ Spark: 2.2.1
 Python: 2.7  
 Scala: 2.11  
 
+### Implementation approach:
+Designed and developed following collaborative filtering based Recommender Systems for predicting User's movie ratings:  
+1. Model based Collaborative Filtering  
+2. User based Collaborative Filtering  
+3. Item based Collaborative Filtering  
+
+
 ### Dataset used for testing:
 [MovieLens](https://grouplens.org/datasets/movielens/) 
 
